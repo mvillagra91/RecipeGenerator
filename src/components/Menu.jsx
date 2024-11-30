@@ -1,27 +1,27 @@
-//import React from 'react'
+// import React from 'react'
 
 export const Menu = () => {
+  const links = [
+    ['Home', '/home'],
+    ['Recetas', '/recetas'],
+    ['Busqueda', '/search'],
+    ['Recomendaciones', '/recomendaciones'],
+  ];
+
   return (
-    <div>
-      <nav className="bg-black pt-1 pb-1 shadow-2xl font-bold">
-        <ul className="flex gap-5 justify-center">
-            <li className="cursor-pointer">Home</li>
-            <li className="cursor-pointer">Recetas</li>
-            <ul className="flex">
-              <div className="relative group">
-                  <div className="flex items-center">
-                      <li className="cursor-pointer">Buscar recetas por:</li>
-                  </div>
-                  <div className="absolute px-1 py-1 hidden group-hover:block bg-black shadow-lg rounded-b-lg">
-                    <li className="cursor-pointer pt-1 px-4 py-1 text-white hover:bg-white rounded hover:text-black">Nacionalidad</li>
-                    <li className="cursor-pointer pt-1 px-5 py-1 text-white hover:bg-white rounded hover:text-black">Ingredientes</li>
-                    <li className="cursor-pointer pt-1 px-8 py-1 text-white hover:bg-white rounded hover:text-black">Nombre</li>
-                  </div>
-              </div>
-          </ul>
-        </ul>
-      </nav>
-      
+    <div className="pt-2 flex justify-center">
+      <nav className="flex sm:justify-center max-w-md space-x-4 bg-gray-200 rounded-xl">
+      {links.map(([title, url], index) => (
+        <a
+          key={index}
+          href={url}
+          className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900"
+          aria-current={window.location.pathname === url ? 'page' : undefined}
+        >
+          {title}
+        </a>
+      ))}
+    </nav>
     </div>
-  )
-}
+  );
+};
