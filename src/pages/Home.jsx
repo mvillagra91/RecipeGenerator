@@ -1,7 +1,7 @@
 //import React from 'react'
 import image from "../assets/images/1820.jpg"
 
-export const Body = () => {
+export const Home = () => {
     return (
       <>
         <div className="flex justify-center min-h-screen">
