@@ -9,7 +9,7 @@ export const Navbar = () => {
     ];
 
     return (
-        <div className="fixed flex justify-center w-full bg-transparent pt-3">
+        <div className="fixed flex justify-center w-full bg-transparent pt-3 z-20">
             <nav className="flex max-w-md space-x-4 bg-gray-800 bg-opacity-90 rounded-xl shadow-2xl">
                 {links.map(([title, url], index) => (
                     <a
