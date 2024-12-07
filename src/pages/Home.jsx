@@ -34,16 +34,15 @@ export const Home = () => {
         </div>
         {/**Box de recetas destacadas (Solo iran 6 por el momento)*/}
         <div className="pt-14 pb-14">
-          <div className="flex flex-wrap gap-12 justify-center sm:grid-cols-1">
-              <div className="size-80 pl-2 pt-2 bg-orange-100 rounded-xl shadow-2xl"></div>
-              <div className="size-80 pl-2 pt-2 bg-orange-100 rounded-xl shadow-2xl"></div>
-              <div className="size-80 pl-2 pt-2 bg-orange-100 rounded-xl shadow-2xl"></div>
-              <div className="size-80 pl-2 pt-2 bg-orange-100 rounded-xl shadow-2xl"></div>
+          <div className="flex flex-wrap gap-12 justify-center gird grid-cols-3 sm:grid-cols-1">
+              <div className="size-80 pl-2 pt-2 bg-orange-100 rounded-xl shadow-2xl hover:scale-110 transition-transform duration-300 ease-in-out"></div>
+              <div className="size-80 pl-2 pt-2 bg-orange-100 rounded-xl shadow-2xl hover:scale-110 transition-transform duration-300 ease-in-out"></div>
+              <div className="size-80 pl-2 pt-2 bg-orange-100 rounded-xl shadow-2xl hover:scale-110 transition-transform duration-300 ease-in-out"></div>
           </div>
         </div>
       </div>
       {/**Información de paises y sus especialidades*/}
-      <div className="relative min-h-screen shadow-xl z-19">
+      <div className="relative min-h-screen shadow-2xl z-19">
         <img
           src={abstractFood}
           alt="Descripción de la imagen"
@@ -53,6 +52,14 @@ export const Home = () => {
           <h1 className= "text-yellow-200 text-4xl md:text-6xl lg:text-7xl font-bold abstract-shadow-text select-none">
             Categoría de alimentos
           </h1>
+        </div>
+      </div>
+      {/**Contacto */}
+      <div className="bg-slate-800 text-white">
+        <div className="grid grid-cols-1 justify-center text-center pt-2 pb-2">
+          <div>
+            <p className="text-xs">Todos los derechos reservados ©</p>
+          </div>
         </div>
       </div>
     </>
